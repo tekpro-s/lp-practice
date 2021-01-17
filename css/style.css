@@ -226,8 +226,8 @@ select {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 90%;
   right: 0%;
+  bottom: 0%;
 }
 
 .news-tag {
@@ -425,7 +425,6 @@ select {
 
 .banner-cat {
   width: 50%;
-  padding: 20px 35px 30px;
   box-sizing: border-box;
   margin-bottom: 50px;
   color: #fff;
@@ -450,11 +449,13 @@ select {
 .banner-company {
   background: url(../img/company.jpeg) no-repeat;
   background-size: cover;
+  margin-right: 20px;
 }
 
 .banner-recruit {
   background: url(../img/recruit.jpg) no-repeat;
   background-size: cover;
+  margin-left: 20px;
 }
 
 #faq {
@@ -524,13 +525,17 @@ select {
   font-weight: normal;
 }
 
+.contact-cat p {
+  margin-bottom: 20px;
+}
+
 .contact-button {
-  position: relative;
+  margin: auto;
+
   width: 150px;
   height: 30px;
-  top: 20px;
-  left: 45%;
   line-height: 30px;
+  
   text-align: center;
   background: rgba(255,255,255,0);
   color: #f2f2f2;
