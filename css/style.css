@@ -1,0 +1,546 @@
+@charset "utf-8";
+
+/* リセットcss */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* その他のスタイルは以下に記述していきます */
+.header {
+  height: 70px;
+  background: #000;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 35px;
+  color: #f2f2f2;
+  line-height: 70px;
+}
+
+.header-nav ul {
+  display: flex;
+}
+
+.header-nav li {
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+#eyecatch {
+  height: 600px;
+  background: url(../img/eyecatch.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, 100%);
+  font-size: 36px;
+  font-style: italic;
+  font-weight: bold;
+  color: #f2f2f2;
+  line-height: 1;
+}
+
+.news-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 90%;
+  right: 0%;
+}
+
+.news-tag {
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #000;
+  color: #f2f2f2;
+}
+
+.news-feed {
+  width: 500px;
+  height: 60px;
+  font-size: 14px;
+  line-height: 20px;
+  background: #fff;
+  color: #000;
+}
+
+.news-title {
+  margin-left: 10px;
+}
+
+#about {
+  width: 100%;
+  height: 400px;
+  background: #000;
+  color: #f2f2f2;
+  margin-bottom: 150px;
+}
+
+.about-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-left h3,
+.about-left p {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.about-left h3 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.about-left p {
+  font-size: 14px;
+}
+
+.about-left {
+  position: relative;
+  line-height: 20px;
+  width: 100%;
+  top: 100px;
+  left: 100px;
+  z-index: 1;
+}
+
+.about-right {
+  position: relative;
+  width: 80%;
+  height: 0px;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+}
+
+.about-right img {
+  display: block;
+  width: 90%;
+}
+
+.mission-detail {
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #f2f2f2;
+  color: #000;
+}
+
+#business {
+  width: 100%;
+  height: 1200px;
+  background-size: cover;
+  background: #CCCCCC;
+  margin-bottom: 100px;
+}
+
+#business .section-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  padding: 40px 0;
+  margin: 0;
+}
+
+.business-wrap p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.business-wrap h3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.business-wrap p {
+  font-size: 14px;
+
+}
+
+.business-wrap img {
+  display: block;
+  width: 100%;
+  z-index: 0;
+}
+
+.business-service1,
+.business-service2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.business-service1 {
+  position: relative;
+  left: 10px;
+}
+
+.business-service2 {
+  position: relative;
+  left: -100px;
+}
+
+.business-text {
+  line-height: 20px;
+  padding: 30px;
+  background: #f2f2f2;
+  z-index: 1;
+}
+
+.business-left,
+.business-right {
+  position: relative;
+  width: 100%;
+}
+
+.business-left {
+  top: 60px;
+  left: 100px;
+}
+
+.business-right {
+  top: 50px;
+  left: 0px;
+}
+
+.service-detail {
+  position: relative;
+  margin: 10px 0;
+  width: 150px;
+  height: 30px;
+  left: 60%;
+  line-height: 30px;
+  text-align: center;
+  background: #f2f2f2;
+  color: #000;
+  border: solid 1px #000000;
+}
+
+#banner .section-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  padding: 40px 0;
+  margin: 0;
+}
+
+.banner-wrap {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-cat {
+  width: 50%;
+  padding: 20px 35px 30px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.banner-cat h3 {
+  font-size: 24px;
+  padding: 50px 0 0 0;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.banner-cat h4 {
+  font-weight: bold;
+}
+
+.banner-company,
+.banner-recruit {
+    height: 150px;
+}
+
+.banner-company {
+  background: url(../img/company.jpeg) no-repeat;
+  background-size: cover;
+}
+
+.banner-recruit {
+  background: url(../img/recruit.jpg) no-repeat;
+  background-size: cover;
+}
+
+#faq {
+  margin-bottom: 100px;
+}
+
+.faq-wrap {
+  position: relative;
+  width: 80%;
+  height: 100px;
+  left: 10%;
+
+  background: #000;
+  color: #f2f2f2;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.faq-cat {
+  padding: 0 37% 0 10px;
+}
+
+.faq-cat h3{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#contact {
+  height: 600px;
+  background: url(../img/contact-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #f2f2f2;
+}
+
+.contact-wrap {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.contact-cat {
+  width: 100%;
+  padding: 150px 35px 30px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+
+.contact-cat h3 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-cat h4 {
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.contact-cat h5 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.contact-button {
+  position: relative;
+  width: 150px;
+  height: 30px;
+  top: 20px;
+  left: 45%;
+  line-height: 30px;
+  text-align: center;
+  background: rgba(255,255,255,0);
+  color: #f2f2f2;
+  border: solid 1px #f2f2f2;
+}
+
+#footer {
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  color: #f2f2f2;
+  background: #000;
+}
